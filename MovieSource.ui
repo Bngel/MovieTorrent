@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MovieSource</class>
+ <widget class="QMainWindow" name="MovieSource">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>301</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>电影资源搜索</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="source.qrc">
+    <normaloff>:/pic/icon.png</normaloff>:/pic/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MovieSource{
+border-image:url(:/pic/背景图片.jpg);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="MovieName">
+        <property name="font">
+         <font>
+          <family>华光准圆_CNKI</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>电影名称:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="MovieInput">
+        <property name="styleSheet">
+         <string notr="true">#MovieInput{
+background:transparent;
+}</string>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="SourceName">
+        <property name="font">
+         <font>
+          <family>华光准圆_CNKI</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>选择片源:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="Source_cbBox">
+        <property name="styleSheet">
+         <string notr="true">#Source_cbBox{
+background:transparent;
+}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>电影天堂</string>
+         </property>
+         <property name="icon">
+          <iconset resource="source.qrc">
+           <normaloff>:/pic/热度.png</normaloff>:/pic/热度.png</iconset>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="StateLabel">
+        <property name="font">
+         <font>
+          <family>华光准圆_CNKI</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>查询状态:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="State">
+        <property name="font">
+         <font>
+          <family>华光准圆_CNKI</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>未开始查询</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>168</width>
+          <height>17</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="SearchButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#SearchButton{
+background:transparent;
+}</string>
+        </property>
+        <property name="text">
+         <string>查询</string>
+        </property>
+        <property name="icon">
+         <iconset resource="source.qrc">
+          <normaloff>:/pic/搜索.png</normaloff>:/pic/搜索.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="CloseButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#CloseButton{
+background:transparent
+}</string>
+        </property>
+        <property name="text">
+         <string>停止搜索</string>
+        </property>
+        <property name="icon">
+         <iconset resource="source.qrc">
+          <normaloff>:/pic/close.png</normaloff>:/pic/close.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListWidget" name="MovieList">
+      <property name="styleSheet">
+       <string notr="true">#MovieList{
+background:transparent;
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
+ <connections/>
+</ui>

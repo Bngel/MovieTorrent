@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>close.png</file>
+    <file>icon.png</file>
+    <file>热度.png</file>
+    <file>搜索.png</file>
+    <file>背景图片.jpg</file>
+  </qresource>
+</RCC>
