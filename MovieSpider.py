@@ -61,7 +61,9 @@ class MovieSpider(QThread):
                         html = requests.get(movies_url, headers=self.header, cookies=self.cookie)
                         html.encoding = 'gb2312'
                         soups = BeautifulSoup(html.text, 'html.parser')
-                        torrent = soups.find('div', {'class', 'co_content8'}).find('td', {'bgcolor': '#fdfddf'}).find('a').get('href')
+                        #print(soups)
+                        #torrent = soups.find('div', {'class', 'co_content8'}).find('td', {'bgcolor': '#fdfddf'}).find('a').get('href')
+                        torrent = soups.find('div', {'class', 'co_content8'}).find_all('div')[0].find('span').find('a').get('href')
                         self.torrent_url.append(torrent)
                         self.mov.MovieList.addItem(movie.find('a').text)
                     if flag == True:
